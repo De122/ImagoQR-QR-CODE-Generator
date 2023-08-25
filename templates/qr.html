@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image QR Code Generator</title>
+
+<link href="/static/style.css" rel="stylesheet">   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header >
+        <h1 class="header-1">ImagoQR</h1>
+        <h4 class="h-2">image qr code generator</h4>
+      </header>
+     <nav>
+        <a href="/"><i class="fa fa-fw fa-home"></i></a>
+        <a href="#about"><i class="fa fa-file"></i> </a>
+        <a href="login.php"><i class="fa fa-fw fa-user"> </i></a>
+
+        <span class="tooltiptext">Home</span>
+        <span class="tooltiptext">About</span>
+        <span class="tooltiptext">Login</span>
+
+     </nav>
+      <div id="cover">
+     
+        <img  src="https://kleap.co/qr-code-generator/assets/images/gradient/qrcode-gradient-showcase-18.png">
+     
+   
+        <img  src="
+        https://media.geeksforgeeks.org/wp-content/uploads/20210106184936/MyQRCode2-300x300.png">
+     
+
+        <img  src="https://ventipix.com/images/qr/designer-qr-codes.png">
+   
+    
+        <img  src="https://www.qrcode-monkey.com/img/default-preview-qr.svg">
+    </div>  
+   
+
+    <form action="/generate_qr_code" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/* " required>
+        <br>
+        <br>
+        <input type="text" name="fcolor" placeholder="enter fill color of your choice" style="width:300px; height:40px; margin-left:20px;">
+        <br>
+        <br>
+        <input type="text" name="bcolor" placeholder="enter background color of your choice" style="width:300px; height:40px; margin-left:20px;">
+        <br>
+        <br>
+        <button type="submit" class="btn">Generate QR Code</button>
+        <button class="dbtn" onclick="downloadIg(this)" title="Download QR Code">DOWNLOAD</button>
+    </form>
+<div class="lines" style="height:20px; width:100%; background-color:white; margin-top:20px;">
+    
+</div>
+    <div class="show" style="text-align: center;">
+        <p >Your QR Code is below here </p>
+        <p>&#8595</p>
+    </div>
+    <h2 style="
+    text-align: center;
+    font-size: 70px;
+  font-weight: 600;
+  background-image: url('https://media.istockphoto.com/id/681748280/vector/pattern-with-qr-code-circles-dotted-background-seamlessly.jpg?s=612x612&w=0&k=20&c=M_8U9Sj6TQ2W1Wzgaih82wc2iRpVF9_dTbYFtZWBTHE=');
+  background-size: 250px;
+  background-repeat: repeat;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+                 ">Generated QR Codes</h2>
+    <ul>
+        {% for qr_image in qr_images %}
+        <li>
+            <img src="{{ qr_image }}" alt="QR Code">
+            <a href="{{ qr_image }}" download="{{ qr_image }}">Download QR Code</a>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <div id="aboutUs">
+        <div class="lines" style="height:20px; width:100%; background-color:white; margin-top:20px;"></div>
+       <h2 style="color:rgb(43, 122, 226); font-size: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">About</h2>
+        <p> This app generates QR code for image file. It accepts all types of images be it jpg , jpeg or png. So get your own qr code for your image file. <br>
+        Not only this, but you also get to customize your code as per your wish and download it as well </p>
+    </div>
+    <footer>
+        <div class="footer">
+          
+        <div class="row">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        
+        <div class="row">
+        <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Career</a></li>
+        </ul>
+        </div>
+        
+        <div class="row">
+        ImagoQR Copyright © 2023 ImagoQR - All rights reserved || Designed By: Deepti
+        </div>
+        </div>
+        </footer>
+   
+
+</body>
+</html>
+
