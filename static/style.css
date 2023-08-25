@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Roboto:ital,wght@0,500;0,900;1,500&display=swap");
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Asap", sans-serif;
+  background-color: #a7a7d8;
+  
+}
+*{
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  height: 40vh;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header h1 {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  font-size: 60px;
+  font-weight: 600;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;   
+}
+header .header-1{
+  background-image: repeating-radial-gradient(farthest-side at 5px 5px,#553c9a, #ee4b2b, #553c9a);
+}
+
+.h-2{
+  background-color: white;
+  width:fit-content;
+  margin-left: 680px;
+}
+
+#cover {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+  }
+  
+  #cover > img {
+    float: left;
+    border: 2px solid black ;
+    border-radius:20px;
+    width: 45%;
+    margin: 1.66%;
+  }
+
+ 
+  form{
+
+    background-color: aliceblue;
+    width:700px;
+    height:300px;
+    overflow: hidden;
+    margin: 0 auto;
+    
+}
+
+input[type=file]{
+ margin-top:80px;
+ width:200px;
+ margin-left: 20px;
+ background-color: #a7a7d8;
+
+
+}
+input[type=text]
+{
+  background-color: #a7a7d8;
+  
+}
+
+input[type=text]:hover{
+  background-color: #d07ec9;
+}
+::placeholder{
+  color: white;
+  font-weight:bolder;
+  font-size: 15px;
+}
+.btn{
+  height:40px; background-color:bisque;
+  margin-left:20px;
+}
+
+.dbtn{
+  height:40px; background-color:bisque;
+  margin-left:20px;
+  width:150px;
+
+}
+
+.show p{
+  color: aliceblue;
+  font-size:40px;
+}
+
+nav{
+  width:100%;
+  height:50px;
+  background-color: black;
+  margin-top:20px;
+  text-align: center;
+  
+}
+
+nav a{
+  margin-left:70px ;
+  font-size:40px;
+  color:white;
+}
+
+
+/* Tooltip container */
+.fa fa-fw fa-home {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+
+/* Tooltip text */
+.fa fa-fw fa-home .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.fa fa-fw fa-home:hover .tooltiptext {
+  visibility: visible;
+}
+
+#aboutUs{
+  background-color: #d07ec9;
+  width:100%;
+  height:300px;
+
+}
+
+#aboutUs p{
+  color:rgb(255, 255, 255);
+  font-size:20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+}
+.footer{
+  background:#000;
+  padding:30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
