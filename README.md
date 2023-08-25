@@ -1,0 +1,1 @@
+# ImagoQR-QR-CODE-Generator
